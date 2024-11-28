@@ -52,7 +52,7 @@ def generar_grafo(pre, post, marcado_inicial):
 
     dot.render('Alcanzable', format='png')
 
-pre = [[1, 0, 0, 0, 0],
+"""pre = [[1, 0, 0, 0, 0],
        [0, 1, 0, 0, 0],
        [0, 0, 1, 0, 0],
        [1, 0, 0, 0, 0],
@@ -64,7 +64,20 @@ post = [[0, 0, 1, 0, 0],
         [0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0],
         [0, 0, 0, 1, 0]]
-marcado_inicial = [1, 0, 0, 1, 0, 0]
+marcado_inicial = [1, 0, 0, 1, 0, 0]"""
 
-generar_grafo(pre, post, marcado_inicial)
+pre=[[1,1,0,0,0,0],
+     [0,0,0,1,0,0],
+     [0,0,1,0,0,0],
+     [0,0,0,0,1,1],
+     [0,0,0,0,1,0],]
+
+post=[[0,0,0,0,1,0],
+     [1,0,0,0,0,0],
+     [0,1,0,0,0,0],
+     [1,0,1,0,0,1],
+     [0,1,0,1,0,0],]
+marcado=[0,1,1,0,0]
+
+generar_grafo(pre, post, marcado)
 print("Liston :D")

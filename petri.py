@@ -21,7 +21,7 @@ def createN(count, marcado):
 
 def createA(count1, count2, label):
     dot.edge(str(count1), str(count2), "  " + label)
-
+"""
 pre = [[1, 0, 0, 0, 0],
        [0, 1, 0, 0, 0],
        [0, 0, 1, 0, 0],
@@ -31,7 +31,7 @@ pre = [[1, 0, 0, 0, 0],
 PRE = np.array(pre)
 post = [[0, 0, 1, 0, 0],
         [1, 0, 0, 0, 0],
-        [0, 1, 0, 0, 0],
+        [0, 2, 0, 0, 0],
         [0, 0, 0, 0, 1],
         [1, 0, 0, 0, 0],
         [0, 0, 0, 1, 0]]
@@ -39,6 +39,23 @@ POST = np.array(post)
 INC = POST - PRE
 
 marcado = [1, 0, 0, 1, 0, 0]
+"""
+pre=[[1,1,0,0,0,0],
+     [0,0,0,1,0,0],
+     [0,0,1,0,0,0],
+     [0,0,0,0,1,1],
+     [0,0,0,0,1,0],]
+
+post=[[0,0,0,0,1,0],
+     [1,0,0,0,0,0],
+     [0,1,0,0,0,0],
+     [1,0,1,0,0,1],
+     [0,1,0,1,0,0],]
+PRE=np.array(pre)
+POST=np.array(post)
+marcado=[0,1,1,0,0]
+INC = POST - PRE
+
 newPre = transpose(PRE)
 newPost = transpose(POST)
 newInc = transpose(INC)
